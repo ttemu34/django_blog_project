@@ -2,9 +2,5 @@
 {% block content %}
 <h1>{{ post.title }}</h1>
 <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
-<p>
-  {% if is_favourite %} ❤️ {% else %}
-  <a href="{% url 'blog:add_favourite' post.id %}">Add to favourites</a>
-  {% endif %}
-</p>
+<p></p>
 {{ post.body|linebreaks }} {% endblock %}
